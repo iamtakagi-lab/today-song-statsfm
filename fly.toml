@@ -1,0 +1,9 @@
+# fly.toml file generated for today-song on 2022-11-28T23:58:56+09:00
+
+app = "today-song"
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
+
+[env]
+  TZ = "Asia/Tokyo"
