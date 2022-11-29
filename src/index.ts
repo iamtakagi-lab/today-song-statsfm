@@ -1,7 +1,7 @@
 process.env.TZ = "Asia/Tokyo"
 
 import { getTopTrackFromLastfm } from "./lastfm.js"
-import { postTweet, updateAccountProfile } from "./twitter.js"
+import { postTweet } from "./twitter.js"
 import moment from "moment"
 import "moment/locale/ja.js"
 
@@ -12,13 +12,8 @@ const handleMain = async () => {
 
   const context = `${moment().format("YYYY/MM/DD")} の曲は ${topTrack.artist.name} の ${topTrack.name} でした ${topTrack.url}`
   console.log(context)
-
-  Promise.all([
-    updateAccountProfile(
-      context
-    ),
-    postTweet(context),
-  ])
+  
+  postTweet(context)
 }
 
 ;(async () => {
