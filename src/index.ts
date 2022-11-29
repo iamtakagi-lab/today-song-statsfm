@@ -5,7 +5,7 @@ import { postTweet, updateAccountProfile } from "./twitter.js"
 import moment from "moment"
 import "moment/locale/ja.js"
 
-export const handleMain = async () => {
+const handleMain = async () => {
   // 直近のトップソングを取得
   const topTrack = await getTopTrackFromLastfm()
   if (!topTrack) throw new Error("[last.fm] 曲データが存在しません ギャオオオオオオオオオオオオオオオオオオオオオオ")
