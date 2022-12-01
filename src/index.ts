@@ -10,7 +10,7 @@ const handleMain = async () => {
   const topTrack = await getTopTrackFromLastfm()
   if (!topTrack) throw new Error("[last.fm] 曲データが存在しません ギャオオオオオオオオオオオオオオオオオオオオオオ")
 
-  const context = `${moment().format("YYYY/MM/DD")} の曲は ${topTrack.artist.name} の ${topTrack.name} でした ${topTrack.url}`
+  const context = `${process.env.LASTFM_USER_ID ?? ''} さんの ${moment().subtract(1, 'days').format("YYYY/MM/DD")} の曲は「${topTrack.artist.name}」の「${topTrack.name}」でした #TodaySong ${topTrack.url}`
   console.log(context)
   
   postTweet(context)
