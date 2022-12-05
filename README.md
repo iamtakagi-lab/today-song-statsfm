@@ -5,7 +5,7 @@
 ### Environment Variables
 以下の環境変数が必要です
 ```env
-# last.fm
+# stats.fm
 STATSFM_ID=
 STATSFM_TOKEN=
 
