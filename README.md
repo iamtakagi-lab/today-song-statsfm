@@ -1,4 +1,4 @@
-# today-song
+# today-song-statsfm
 
 ## Getting Started
 
@@ -6,8 +6,8 @@
 以下の環境変数が必要です
 ```env
 # last.fm
-LASTFM_USER_ID=
-LASTFM_API_KEY=
+STATSFM_ID=
+STATSFM_TOKEN=
 
 # Twitter
 TWITTER_CK=
@@ -20,7 +20,7 @@ TWITTER_ATS=
 ```sh
 flyctl launch
 flyctl deploy
-flyctl secrets set LASTFM_USER_ID= LASTFM_API_KEY= TWITTER_CK= TWITTER_CS= TWITTER_AT= TWITTER_ATS=
+flyctl secrets set STATSFM_ID= STATSFM_TOKEN= TWITTER_CK= TWITTER_CS= TWITTER_AT= TWITTER_ATS=
 ```
 
 ## LICENSE
