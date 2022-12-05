@@ -12,7 +12,6 @@ const handleMain = async () => {
   const { track } = data
   const context = `${process.env.STATSFM_ID ?? ''} さんの ${moment().subtract(1, 'days').format("YYYY/MM/DD")} の曲は「${track.artists.map((artist) => artist.name).join(",")}」の「${track.name}」でした #TodaySong https://open.spotify.com/track/${track.externalIds.spotify[0]}`
   console.log(context)
-  
   postTweet(context)
 }
 

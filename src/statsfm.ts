@@ -3,7 +3,6 @@ import fetch from "node-fetch";
 export const getTopTrackFromStatsfm = async () => {
   const apiUrl = new URL(`/api/v1/users/${process.env.STATSFM_ID}/top/tracks`, 'https://api.stats.fm');
   apiUrl.searchParams.set('range', 'weeks');
-
   const result = await fetch(apiUrl.toString(), {
     method: 'GET',
     headers: {
@@ -13,7 +12,6 @@ export const getTopTrackFromStatsfm = async () => {
   });
   const data = await result.json();
   if (!data) return undefined
-  console.log(data as ToptracksResnponse.RootObject)
   return (data as ToptracksResnponse.RootObject).items[0]
 }
 
