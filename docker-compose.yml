@@ -2,7 +2,7 @@ version: '3.8'
 services:
   app:
     container_name: app
-    image: today-song:latest
+    image: today-song-statsfm:latest
     build:
       context: .
       dockerfile: Dockerfile
