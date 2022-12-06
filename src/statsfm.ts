@@ -12,10 +12,10 @@ export const getTopTrackFromStatsfm = async () => {
   });
   const data = await result.json();
   if (!data) return undefined
-  return (data as ToptracksResnponse.RootObject).items[0]
+  return (data as TopTracksResnponse.RootObject).items[0]
 }
 
-declare module ToptracksResnponse {
+declare module TopTracksResnponse {
 
   export interface Album {
       id: number;
